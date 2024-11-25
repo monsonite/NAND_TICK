@@ -23,5 +23,7 @@ Any of these "chips"  can be opened - so the underlying logic and functionality 
 
 If converted to disctete LED DTL logic, using through hole components the shift register woyld be about 240mm x100 mm. Combo and the KB74 plus ROM and RAM would fit on a similar sized board. These could be rack mounted with a simple bus running between them.
 
+NAND_TICK_13 is a half-way house to a working CPU.  It require the ROM to drive the instruction inputs on the Combo chip, and RAMs with read-write control logic to be added. It would probably be a good idea to provide an Input/Output register so that data can be passed in and out via SPI transfers. These additions would complete a working design in fewer than 1000 discrete transistors.
+
 
 
