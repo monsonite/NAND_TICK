@@ -1,11 +1,13 @@
 # NAND_TICK
+
+
 A 16-bit Serial CPU in NAND Logic
 
 NAND TICK is one of a family of experimental bit-serial CPUs, intended for home construction from common parts.
 
 It was designed as a follow-on to the earlier TICK, which was built from 74HCxx logic devices.
 
-It began with the idea, that if a "ficticious" 16-bit universal shift  register (Parallel to Serial, and Serial to latching patallel) was available in a 40 pin DIL package, then this would gratly reduce the complexity and inventrory required to build a 16-bit bit-serial machine.
+It began with the idea, that if a "ficticious" 16-bit universal shift  register (Parallel to Serial, and Serial to latching parallel) was available in a 40 pin DIL package, then this would gratly reduce the complexity and inventrory required to build a 16-bit bit-serial machine.
 
 Such a device was created using H.Neemann's "Digital" simulator (here on Github) entirely using NAND gates. This means tht such a device could be built using whichever logic is available, be it 74HCxx, discrete DTL, LED-DTL, or discrete CMOS.
 
@@ -21,9 +23,15 @@ A minimal design would typically be three of the shift registers, (Accumulator, 
 
 Any of these "chips"  can be opened - so the underlying logic and functionality can be inspected.
 
-If converted to disctete LED DTL logic, using through hole components the shift register woyld be about 240mm x100 mm. Combo and the KB74 plus ROM and RAM would fit on a similar sized board. These could be rack mounted with a simple bus running between them.
+If converted to discrete LED DTL logic, using through-hole components the shift register woyld be about 240mm x100 mm.  DFF-24.jpg shows how one quarter of the basic KB165 register could be assembled on a 4-layer PCB (internal power and ground planes) with conventional through-hole components.
 
-NAND_TICK_13 is a half-way house to a working CPU.  It require the ROM to drive the instruction inputs on the Combo chip, and RAMs with read-write control logic to be added. It would probably be a good idea to provide an Input/Output register so that data can be passed in and out via SPI transfers. These additions would complete a working design in fewer than 1000 discrete transistors.
+The Combo and the KB74 plus ROM and RAM would fit on a similar 240x100mm sized board. These could be rack mounted, using DIN41612 backplane connectors with a simple bus running between them.
+
+The NAND_TICK_13 circuit is a half-way house to a working CPU.  
+
+It requires the ROM to drive the instruction inputs on the Combo chip, and RAMs with read-write control logic to be added. 
+
+It would probably be a good idea to provide an Input/Output register so that data can be passed in and out via SPI transfers. These additions would complete a working design in fewer than 1000 discrete transistors.
 
 
 
