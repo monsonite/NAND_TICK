@@ -31,7 +31,11 @@ The NAND_TICK_13 circuit is a half-way house to a working CPU.
 
 It requires the ROM to drive the instruction inputs on the Combo chip, and RAMs with read-write control logic to be added. 
 
+This has been added in NAND_TICK_16, which can run a simple test program from ROM, allowing arithmetic operations and jumping.
+
 It would probably be a good idea to provide an Input/Output register so that data can be passed in and out via SPI transfers. These additions would complete a working design in fewer than 1000 discrete transistors.
+
+
 
 
 
